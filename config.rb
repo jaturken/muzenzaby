@@ -8,6 +8,10 @@ activate :deploy do |deploy|
   deploy.build_before = true
 end
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-60570700-1'
+end
+
 ###
 # Compass
 ###
