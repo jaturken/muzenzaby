@@ -1,6 +1,10 @@
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.method = :rsync
+  deploy.host = '198.20.105.55'
   deploy.branch   = 'build'
+  deploy.path = '/home/deploy/muzenzaby'
+  deploy.user = 'deploy'
+  deploy.clean = true
   deploy.build_before = true
 end
 
