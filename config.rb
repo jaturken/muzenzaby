@@ -12,6 +12,14 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-60570700-1'
 end
 
+configure :development do
+  set :debug_assets, true
+end
+
+configure :build do
+  activate :minify_css
+end
+
 ###
 # Compass
 ###
